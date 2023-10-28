@@ -1,0 +1,15 @@
+[SddmGreeterTheme]
+Name=test
+Description=test
+Author=TheoIsDumb
+Copyright=Copyright (C) 2023 TheoIsDumb
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=1.0
+Website=https://github.com/theoisdumb/sddm-theme.git
+Screenshot=Previews/preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Theme-Id=test
+Theme-API=2.11
