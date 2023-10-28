@@ -7,8 +7,8 @@ import "Components"
 Pane {
     id: root
 
-    height: config.ScreenHeight || Screen.height
-    width: config.ScreenWidth || Screen.ScreenWidth
+    height: config.ResY || Screen.height
+    width: config.ResX || Screen.ScreenWidth
     padding: 0
 
     Image {
