@@ -269,8 +269,6 @@ Column {
                 id: indicator
                 anchors.left: parent.left
                 anchors.top: parent.top
-                anchors.topMargin: 3
-                anchors.leftMargin: 4
                 implicitHeight: root.font.pointSize
                 implicitWidth: root.font.pointSize
                 color: "transparent"
@@ -289,8 +287,7 @@ Column {
             contentItem: Text {
                 id: indicatorLabel
                 text: config.TranslateShowPassword || "Show Password"
-                anchors.horizontalAlignment: indicator.horizontalCenter
-                horizontalAlignment: Text.AlignLeft
+                anchors.verticalCenter: indicator.verticalCenter
                 anchors.left: indicator.right
                 anchors.leftMargin: indicator.width
                 font.pointSize: root.font.pointSize * 0.8

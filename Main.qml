@@ -23,6 +23,14 @@ Pane {
     }
 
     Rectangle {
+        id: overlay
+        height: config.ResY || Screen.height
+        width: config.ResX || Screen.ScreenWidth
+        color: config.OverlayColor
+        opacity: config.OverlayOpacity
+    }
+
+    Rectangle {
         height: parent.height / 3
         width: parent.width / 3
         color: config.BackgroundColor
