@@ -1,5 +1,7 @@
 # sddm-theme
 
+![screenshot](Previews/screenshot.png)
+
 An elegant theme for [SDDM](https://github.com/sddm/sddm).
 
 Forked from [Sugar Candy](https://framagit.org/MarianArlt/sddm-sugar-candy).

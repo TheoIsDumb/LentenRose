@@ -257,7 +257,7 @@ Column {
     Item {
         id: secretCheckBox
         height: root.font.pointSize * 7
-        width: parent.width / 1.3
+        width: parent.width / 2.5
         anchors.horizontalCenter: parent.horizontalCenter
 
         CheckBox {
@@ -267,7 +267,6 @@ Column {
 
             indicator: Rectangle {
                 id: indicator
-                anchors.left: parent.left
                 anchors.top: parent.top
                 implicitHeight: root.font.pointSize
                 implicitWidth: root.font.pointSize
