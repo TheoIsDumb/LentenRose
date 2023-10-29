@@ -48,6 +48,8 @@ Item {
                 color: selectSession.highlightedIndex === index ? root.palette.highlight.hslLightness >= 0.7 ? "#444444" : "white" : root.palette.window.hslLightness >= 0.8 ? root.palette.highlight.hslLightness >= 0.8 ? "#444444" : root.palette.highlight : "white"
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
+                font.family: config.Font
+                font.bold: true
             }
             highlighted: parent.highlightedIndex === index
             background: Rectangle {
@@ -69,6 +71,8 @@ Item {
             anchors.leftMargin: 3
             font.pointSize: root.font.pointSize * 0.8
             Keys.onReleased: parent.popup.open()
+            font.family: config.Font
+            font.bold: true
         }
 
         background: Rectangle {

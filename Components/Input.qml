@@ -51,7 +51,8 @@ Column {
                 contentItem: Text {
                     text: model.name
                     font.pointSize: root.font.pointSize * 0.8
-                    font.capitalization: Font.Capitalize
+                    font.family: config.Font
+                    font.bold: true
                     color: config.TextColor
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
@@ -293,6 +294,8 @@ Column {
                 anchors.left: indicator.right
                 anchors.leftMargin: indicator.width
                 font.pointSize: root.font.pointSize * 0.8
+                font.family: config.Font
+                font.bold: true
                 color: config.DimColor
             }
 
@@ -436,6 +439,8 @@ Column {
                 text: parent.text
                 color: config.TextColor
                 font.pointSize: root.font.pointSize
+                font.family: config.Font
+                font.bold: true
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 opacity: 0.5
