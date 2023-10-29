@@ -10,6 +10,7 @@ Pane {
     height: config.ResY || Screen.height
     width: config.ResX || Screen.ScreenWidth
     padding: 0
+    font.family: config.Font
 
     Image {
         id: backgroundImage
