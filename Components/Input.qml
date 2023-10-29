@@ -289,7 +289,7 @@ Column {
             contentItem: Text {
                 id: indicatorLabel
                 text: config.TranslateShowPassword || "Show Password"
-                anchors.verticalCenter: indicator.verticalCenter
+                anchors.horizontalAlignment: indicator.horizontalCenter
                 horizontalAlignment: Text.AlignLeft
                 anchors.left: indicator.right
                 anchors.leftMargin: indicator.width
