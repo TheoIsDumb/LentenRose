@@ -431,7 +431,7 @@ Column {
     Item {
         id: login
         height: root.font.pointSize * 3
-        width: parent.width / 2
+        width: parent.width / 1.5
         anchors.horizontalCenter: parent.horizontalCenter
 
         Button {

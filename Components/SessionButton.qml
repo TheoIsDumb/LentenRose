@@ -17,7 +17,7 @@ Item {
         id: selectSession
 
         hoverEnabled: true
-        anchors.left: parent.left
+        anchors.horizontalCenter: parent.horizontalCenter
         Keys.onPressed: {
             if (event.key == Qt.Key_Up && loginButton.state != "enabled" && !popup.opened)
                 revealSecret.focus = true,
@@ -62,8 +62,9 @@ Item {
         contentItem: Text {
             id: displayedItem
             text: (config.TranslateSession || (textConstantSession + ":")) + " " + selectSession.currentText
-            color: root.palette.text
+            horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
+            color: config.DimColor
             anchors.left: parent.left
             anchors.leftMargin: 3
             font.pointSize: root.font.pointSize * 0.8
