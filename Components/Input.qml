@@ -52,7 +52,7 @@ Column {
                     text: model.name
                     font.pointSize: root.font.pointSize * 0.8
                     font.capitalization: Font.Capitalize
-                    color: selectUser.highlightedIndex === index ? root.palette.highlight.hslLightness >= 0.7 ? "#444" : "white" : root.palette.window.hslLightness >= 0.8 ? root.palette.highlight.hslLightness >= 0.8 ? "#444" : root.palette.highlight : "white"
+                    color: config.TextColor
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignHCenter
                 }
@@ -156,8 +156,10 @@ Column {
         TextField {
             id: username
             text: config.ForceLastUser == "true" ? selectUser.currentText : null
-            font.capitalization: config.AllowBadUsernames == "false" ? Font.Capitalize : Font.MixedCase
+            font.capitalization: Font.AllLowercase
+            font.bold: true
             anchors.centerIn: parent
+            color: config.TextColor
             height: root.font.pointSize * 3
             width: parent.width
             placeholderText: config.TranslatePlaceholderUsername || textConstants.userName
@@ -170,7 +172,7 @@ Column {
             }
             background: Rectangle {
                 color: "transparent"
-                border.color: root.palette.text
+                border.color: config.DimColor
                 border.width: parent.activeFocus ? 2 : 1
                 radius: config.RoundCorners || 0
             }
@@ -217,7 +219,7 @@ Column {
             renderType: Text.QtRendering
             background: Rectangle {
                 color: "transparent"
-                border.color: root.palette.text
+                border.color: config.DimColor
                 border.width: parent.activeFocus ? 2 : 1
                 radius: config.RoundCorners || 0
             }
@@ -270,7 +272,7 @@ Column {
                 implicitHeight: root.font.pointSize
                 implicitWidth: root.font.pointSize
                 color: "transparent"
-                border.color: root.palette.text
+                border.color: config.DimColor
                 border.width: parent.activeFocus ? 2 : 1
                 Rectangle {
                     id: dot
@@ -290,7 +292,7 @@ Column {
                 anchors.left: indicator.right
                 anchors.leftMargin: indicator.width
                 font.pointSize: root.font.pointSize * 0.8
-                color: root.palette.text
+                color: config.DimColor
             }
 
             Keys.onReturnPressed: toggle()
