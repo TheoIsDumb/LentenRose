@@ -207,6 +207,7 @@ Column {
         TextField {
             id: password
             anchors.centerIn: parent
+            color: config.TextColor
             height: root.font.pointSize * 3
             width: parent.width
             focus: config.ForcePasswordFocus == "true" ? true : false
@@ -279,7 +280,7 @@ Column {
                     anchors.centerIn: parent
                     implicitHeight: parent.width - 6
                     implicitWidth: parent.width - 6
-                    color: root.palette.text
+                    color: config.DimColor
                     opacity: revealSecret.checked ? 1 : 0
                 }
             }
@@ -298,18 +299,6 @@ Column {
             Keys.onReturnPressed: toggle()
             Keys.onEnterPressed: toggle()
             KeyNavigation.down: loginButton
-
-            background: Rectangle {
-                color: "transparent"
-                border.width: parent.activeFocus ? 1 : 0
-                border.color: parent.activeFocus ? root.palette.text : "transparent"
-                height: parent.activeFocus ? 2 : 0
-                width: (indicator.width + indicatorLabel.contentWidth + indicatorLabel.anchors.leftMargin + 2)
-                anchors.top: indicatorLabel.bottom
-                anchors.left: parent.left
-                anchors.leftMargin: 3
-                anchors.topMargin: 8
-            }
         }
 
         states: [
