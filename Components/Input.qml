@@ -204,14 +204,14 @@ Column {
         height: root.font.pointSize * 4.5
         width: parent.width / 1.3
         anchors.horizontalCenter: parent.horizontalCenter
-
+        
         TextField {
             id: password
             anchors.centerIn: parent
             color: config.TextColor
             height: root.font.pointSize * 3
             width: parent.width
-            focus: config.ForcePasswordFocus == "true" ? true : false
+            focus: true
             selectByMouse: true
             echoMode: revealSecret.checked ? TextInput.Normal : TextInput.Password
             placeholderText: config.TranslatePlaceholderPassword || textConstants.password
@@ -252,6 +252,10 @@ Column {
                 }
             }
         ]
+
+        Component.onCompleted: {
+            password.forceActiveFocus()
+        }
     }
 
     Item {
