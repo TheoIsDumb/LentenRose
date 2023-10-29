@@ -4,15 +4,32 @@ import QtQuick.Controls 2.4
 Column {
     id: clock
 
+    property var timeText: Qt.callLater(new Date().toLocaleTimeString(Qt.locale(config.Locale), Locale.ShortFormat).split(':'))
+
+    function updateTime() {
+        timeText = new Date().toLocaleTimeString(Qt.locale(config.Locale), Locale.ShortFormat).split(':')
+    }
+
     Label {
-        id: timeLabel
+        id: hhlabel
         font.pointSize: root.font.pointSize * 2.5
         color: config.TextColor
-        renderType: Text.QtRendering
         anchors.right: parent.right
-        function updateTime() {
-            text = new Date().toLocaleTimeString(Qt.locale(config.Locale), Locale.ShortFormat)
-        }
+        text: timeText[0]
+    }
+    Label {
+        id: mmlabel
+        font.pointSize: root.font.pointSize * 2.5
+        color: config.TextColor
+        anchors.right: parent.right
+        text: timeText[1]
+    }
+    Label {
+        id: sslabel
+        font.pointSize: root.font.pointSize * 2.5
+        color: config.TextColor
+        anchors.right: parent.right
+        text: timeText[2]
     }
 
     Timer {
@@ -20,11 +37,11 @@ Column {
         repeat: true
         running: true
         onTriggered: {
-            timeLabel.updateTime()
+            clock.updateTime()
         }
     }
 
     Component.onCompleted: {
-        timeLabel.updateTime()
+        clock.updateTime()
     }
 }
