@@ -1,8 +1,8 @@
 [SddmGreeterTheme]
-Name=test
-Description=test
-Author=TheoIsDumb
-Copyright=Copyright (C) 2023 TheoIsDumb
+Name=LentenRose
+Description=Made by Theo.
+Author=Theo
+Copyright=Copyright (C) 2023 Theo
 License=GPL-3.0-or-later
 Type=sddm-theme
 Version=1.0
@@ -11,5 +11,5 @@ Screenshot=Previews/screenshot.png
 MainScript=Main.qml
 ConfigFile=theme.conf
 TranslationsDirectory=translations
-Theme-Id=test
+Theme-Id=lentenrose
 Theme-API=2.11
