@@ -1,4 +1,4 @@
-# LentenRose
+<h1 align="center">LentenRose</h1>
 
 ![screenshot](Previews/screenshot.png)
 
