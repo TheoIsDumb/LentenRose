@@ -1,4 +1,4 @@
-# sddm-theme
+# LentenRose
 
 ![screenshot](Previews/screenshot.png)
 
@@ -10,11 +10,11 @@ Forked from [Sugar Candy](https://framagit.org/MarianArlt/sddm-sugar-candy).
 
 1. Clone the repo
 
-`git clone https://github.com/theoisdumb/sddm-theme.git`
+`git clone https://github.com/TheoIsDumb/LentenRose.git`
 
 2. Copy repo to SDDM Themes directory
 
-`sudo cp -ar sddm-theme /usr/share/sddm/themes`
+`sudo cp -ar LentenRose /usr/share/sddm/themes`
 
 3. Edit SDDM configuration file
 
@@ -29,5 +29,5 @@ Forked from [Sugar Candy](https://framagit.org/MarianArlt/sddm-sugar-candy).
 
 ```
 [Theme]
-Current=sddm-theme
+Current=LentenRose
 ```
